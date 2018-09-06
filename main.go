@@ -46,6 +46,9 @@ var Alpha = map[string]string{
 }
 
 func main() {
+        if len(os.Args) < 2 {
+          log.Fatal("No input provided")
+        }
 	string := os.Args[1]
 	parts := strings.Split(string, "")
 	if len(parts) > 20 {
